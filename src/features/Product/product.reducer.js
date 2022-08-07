@@ -39,10 +39,6 @@ const product = createSlice({
         ...state.productsInCart,
         { ...foundItem, quantity: 1 },
       ];
-      state.totalAmount = state.productsInCart.reduce(
-        (a, b) => a.price + b.price,
-        state.totalAmount
-      );
     },
     incrementProductQuantity: (state, action) => {
       const productId = action.payload;
